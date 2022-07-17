@@ -1,7 +1,7 @@
 const formulario = document.getElementById("formulario");
-const usuario = document.getElementById("emailUsuario");
+const usuario = document.getElementById("email");
 const alertaUsuario = document.getElementById("emailHelp");
-const contra = document.getElementById("contraseñaUsuario");
+const contra = document.getElementById("password");
 const alertaContra = document.getElementById("passHelp");
 const rememberMe = document.getElementById("recuerdameCheck");
 
@@ -28,7 +28,7 @@ formulario.addEventListener("submit", (e)=>{
     }
 
     //Validar la contraseña del usuario:
-    if (contra.value !== validUser.contraseña) {
+    if (contra.value !== validUser.contrasena) {
         console.log("No se escribió contraseña.");
         alert("No ingresaste contraseña.");
         alertaContra.classList.add("text-danger");
@@ -39,13 +39,13 @@ formulario.addEventListener("submit", (e)=>{
         contra.classList.add("is-valid");
         okPass = true;
     }
-    
     if (okUser == true && okPass == true) {
-        swal("Bienvenido! :D", "", "success")
-            .then((value) => {
-                window.location.href = "../index.html";
-            }
-        );
-    }
-    
-})
+		console.log("Funciona por acá.");
+		alert("Bienvenido");
+		window.location.href = "./index.jsp";
+        
+       
+    }  
+     
+}); /*Cierra Formulario AdEventListener*/
+

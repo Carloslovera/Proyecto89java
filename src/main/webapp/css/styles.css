@@ -1,9 +1,16 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     display: flex;
     flex-flow: column nowrap;
     align-items: stretch;
     min-height: 100vh;
+
 }
 
 header{
@@ -11,12 +18,9 @@ header{
 }
 
 main{
-    flex: 1 0 auto;
-}
-
-footer{
-    flex: 0 0 auto;
-}
+     flex: 0 0 auto;
+     background-image: url("https://img.freepik.com/vector-gratis/fondo-patrones-deportes-fisuras_98292-4294.jpg?w=1080");
+ }
 
 footer div h5{
     font-size: 28px !important;
@@ -29,7 +33,7 @@ footer div p{
 
 #LOGOheader{
     margin: 5px;
-    height: 45px;
+    height: 55px;
 }
 
 .containerCarousel{
@@ -40,7 +44,7 @@ footer div p{
 
 .carousel{
 	
-    height: 300px;
+    height: 450px;
     overflow: hidden;
 }
 
@@ -70,11 +74,49 @@ nav ul li div{
 }
 
 nav ul li:hover div{
-    /*isibility: visible;*/
+    /*Visibility: visible;*/
     display: flex;
     flex-flow: column nowrap;
 }
 
 li a.active, li a:hover{
     transition: .5s;
+}
+
+section .btn:hover {
+	background-color:white;
+	transition: all 300ms ease;
+	
+}
+
+#MetodosDePago {
+	background-image: url("https://previews.123rf.com/images/vaskinamat/vaskinamat1702/vaskinamat170200022/72494424-sport-banner-portada-de-facebook-conjunto-de-bolas-de-deporte-y-art%C3%ADculos-de-juego-en-un-fondo-azul-.jpg");
+}
+#MarcasOficiales {
+	background-color: black;
+	border-radius: 25px;
+	background: url("https://gestion.pe/resizer/oo_dH7lCEwzrUU2oEC5L1f60D4s=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/RBRVBOJEBBGUXLOH2EPO32UOGY.jpg");
+	text-shadow: 1px 1px 5px black;
+}
+
+#Categorias {
+	background-color: black;
+	border-radius: 25px;
+	background: url("https://previews.123rf.com/images/xtremer/xtremer0909/xtremer090900015/5545888-transparente-patr%C3%B3n-de-c%C3%A9sped-.jpg");
+}
+
+section h2, div h2 {
+	color: White;
+	text-shadow: 2px 2px 5px green;
+	text-align: center;
+	font-size: 4em;
+}
+div h2{
+	color: Withe;
+	text-shadow: 2px 2px 5px red;
+}
+
+.card {
+	border: 10px;
+	border-style: inset;
 }
