@@ -6,111 +6,58 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="ISO-8859-1">
-    <title>E-Commerce - CaC fullStack 22030 - Grupo 11</title>
+    <title>FullStack Deportes - CaC 22030</title>
     <!-- Bootstrap 4.6 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css"/>
+    <link rel="stylesheet" href="./css/login.css"/>
     
 </head>
 
 <body>
     <!-- Comienzo Header -->
     <header>
-    
-        <!-- Navbar content -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="col ">
-                <a class="navbar-brand p-0" href="./index.jsp">
-                <img id="LOGOheader" src="./img/logo.png" />
-                </a>
-                <p class="navbar-brand text-white">FullStack Deportes</p>
-            </div>
-            <!-- Fin Logo + Brand -->
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuHeader" aria-controls="menuHeader" aria-expanded="false" aria-label="MenÃº desplegable.">
-                <span class="navbar-toggler-icon"></span>
-            </button>          
-            <div class="collapse navbar-collapse" id="menuHeader">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./index.jsp">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./categorias.jsp">Categorias</a>
-                    <div>
-                        <span class="nav-item"><a class="nav-link" href="./calzados.jsp">Calzados</a></span>
-                        <span class="nav-item"><a class="nav-link" href="./remeras.jsp">Remeras</a></span>
-                        <span class="nav-item"><a class="nav-link" href="./pantalones.jsp">Pantalones</a></span>
-                        <span class="nav-item"><a class="nav-link" href="./camperas.jsp">Camperas y Buzos</a></span>
-                      </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./productos.jsp">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./compras.jsp">Compras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./carrito.jsp">Carrito</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./login.jsp">Login</a>
-                </li>
-                </ul>
-                <form class="form-inline my-2 my-lg-0">
-                <input id="buscarProducto" class="form-control mr-sm-2" type="search" placeholder="Buscar producto...">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-                    <img src="https://gogeticons.com/frontend/web/icons/data/5/2/6/2/1/search_512.png" width="24px" height="24px"></img>
-                </button>
-                </form>
-            </div>
-        </nav>
-        <!-- FIN NAVBAR -->
+    <!-- Navbar content -->
+		<%@include file="./Visuales/header.jsp"%>
     </header>
-    <!-- FIN HEADER -->
-
+    
     <!-- Comienzo MAIN -->
-    <main class="bg-info">
-        <div class="d-flex justify-content-center m-5">     <!-- Contenedor -->
+	<main class="bg-info">
 
-
-            <form id="formulario" class="text-center w-50"> <!-- Formulario Inicio SesiÃ³n -->
-                <div class="form-group">                    <!-- Usuario y ContraseÃ±a -->
-                    <label for="emailUsuario" class="font-weight-bold">E-mail Ã³ Nombre de Usuario</label>
-                    <input type="email" class="form-control" id="emailUsuario" aria-describedby="emailHelp">
-                    <small id="emailHelp" class="form-text">Â¡No informes tu e-mail de registro a nadie!</small>
+	<div class="container align-item-center bg-info" id="formularioLogin">
+        <div class="d-flex justify-content-center">     <!-- Contenedor -->
+            <form id="formulario" class="text-center w-50" accept-charset=utf-8> <!-- Formulario Inicio Sesión -->
+                <div class="form-group">                    <!-- Usuario y Contraseña -->
+                    <label for="email" class="font-weight-bold">E-mail ó Nombre de Usuario</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text">¡No informes tu e-mail de registro a nadie!</small>
                     <br>
-                    <label for="contraseÃ±aUsuario" class="font-weight-bold">ContraseÃ±a</label>
-                    <input type="password" class="form-control" id="contraseÃ±aUsuario" aria-describedby="passHelp">
-                    <small id="passHelp" class="form-text">Â¡No compartas tu contraseÃ±a con nadie! Nosotros nunca te la pediremos.</small>
+                    <label for="password" class="font-weight-bold">Contraseña</label>
+                    <input type="password" class="form-control" id="password" aria-describedby="passHelp">
+                    <small id="passHelp" class="form-text">¡No compartas tu contraseña con nadie! Nosotros nunca te la pediremos.</small>
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="recuerdameCheck">
                     <label class="form-check-label font-weight-bold" for="recuerdameCheck">Recuerdame</label>
                 </div>
-                <a href="./register.jsp" class="text-reset">Registrese.</a>
+                <a href="./register.jsp" class="text-reset">Regístrese.</a>
                 <button type="submit" class="btn btn-primary" >Iniciar</button> <!-- onclick="validarForm()" -->
             </form>
 
-
+			</div>
         </div>
     </main>
-  <!-- FIN MAIN -->
+	<!-- FIN MAIN -->
 
-  <!-- Comienzo FOOTER -->
-  <footer>
-    <div class="bg-dark p-2">
-      <h5 class="text-white h4 d-inline">FullStack Deportes</h5> <p class="d-inline muted">Una empresa familiar, desde el 2022 brindando el mejor servicio.</p>
-      <p class="text-muted">&copy 2022 - CaC #22030 - FullStack Java - Profersor: Cristian Gadea.</p>
-    </div>
-  </footer> 
-  <!-- FIN FOOTER -->
-
-
-  <!-- JS Source -->
+	<!-- Comienzo FOOTER -->
+	<footer>
+    	<%@include file="./Visuales/footer.jsp" %>
+  	</footer> 
+  	<!-- FIN FOOTER -->
+  	
+  	<!-- JS Source -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>  
-  <script src="./js/login.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- https://sweetalert.js.org/guides/ -->
+  <script src="js/login.js"></script>
 </body>
 </html>
