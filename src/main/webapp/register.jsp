@@ -29,12 +29,12 @@
 		</div>
 
 		<!-- INICIO FORMULARIO. -->
-		<form id="formulario" class="needs-validation mx-5" accept-charset=utf-8 novalidate> 
+		<form id="register-form" class="reigster-form" accept-charset=utf-8 novalidate novalidate method="post" action="register" > 
 	
 		    <div class="form-row"><!-- INICIO Nombre y Apellido -->
 		      <div class="col-md-6 mb-3">
-		        <label for="nombre">Nombre <span class="text-warning font-weight-bold">*</span></label>
-		        <input type="text" class="form-control" id="nombre" placeholder="Ej: Cristian" required>
+		        <label for="name">Nombre <span class="text-warning font-weight-bold">*</span></label>
+		        <input type="text" class="form-control" id="name" placeholder="name" required>
 		        <div class="valid-feedback">
 		          Correcto!
 		        </div>
@@ -138,7 +138,7 @@
 		        </div>
 		      </div>
 		    </div>
-		    <button class="btn btn-primary" type="submit" onclick="saveOnLocalStorage()">Aceptar</button>
+		    <button class="btn btn-primary" type="submit" onclick="saveOnLocalStorage">Aceptar</button>
 	  </form>
 	  <br/><br/><br/>
 

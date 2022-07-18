@@ -64,10 +64,12 @@ function saveOnLocalStorage() {
     if (nuevo_contrasena.value !== null && nuevo_contrasena.value !== ''){
       let guardarDatos = new UsuarioNuevo(nuevo_email.value,nuevo_contrasena.value); // para sumar más datos: nuevo_nombre.value, nuevo_apellido.value,nueva_localidad.value,nueva_ciudad.value,nuevo_cp.value,nuevo_tel.value
       localStorage.setItem("usuario", JSON.stringify(guardarDatos));
-      alert("Registro exitoso!");
-       
+      
+      window.location.href = "./register.jsp";
+       alert("Registro exitoso!");
     }
     
   }
+  
 }
-window.location.href = "./login.jsp";
+
