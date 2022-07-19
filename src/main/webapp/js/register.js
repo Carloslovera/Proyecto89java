@@ -66,6 +66,7 @@ var status = document.getElementById("status").value;
 
 
 
+
 /*function saveOnLocalStorage() 
 	{
   	//agregar los ítems válidos al localStorage:

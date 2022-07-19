@@ -12,6 +12,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+
 @WebServlet("/register")
 public class Register extends HttpServlet 
 {
@@ -26,10 +27,12 @@ public class Register extends HttpServlet
 		System.out.println(uemail);
 		String upwd = request.getParameter("password");
 		System.out.println(upwd);
+
 		RequestDispatcher disp = null;
 		Connection con = null;
 
 		
+
 		try 
 		{
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -50,11 +53,13 @@ public class Register extends HttpServlet
 				request.setAttribute("status", "success");
 			} else 
 			{
+
 				request.setAttribute("status", "failed");
 			}
 			
 			disp.forward(request, response);
 			
+
 		} catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -65,6 +70,7 @@ public class Register extends HttpServlet
 				con.close();
 			} catch (SQLException e) 
 			{
+
 				e.printStackTrace();
 			}
 		}
