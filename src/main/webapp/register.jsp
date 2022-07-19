@@ -14,6 +14,9 @@
 </head>
 
 <body>
+	<!-- Para Validar Usuario -->
+	<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+
     <!-- Comienzo Header -->
     <header>
     <!-- Navbar content -->
@@ -29,12 +32,12 @@
 		</div>
 
 		<!-- INICIO FORMULARIO. -->
-		<form id="formulario" class="needs-validation mx-5" accept-charset=utf-8 novalidate> 
+		<form method="post" action="register" id="formulario" class="register-form needs-validation mx-5" accept-charset=utf-8 novalidate> 
 	
 		    <div class="form-row"><!-- INICIO Nombre y Apellido -->
 		      <div class="col-md-6 mb-3">
-		        <label for="nombre">Nombre <span class="text-warning font-weight-bold">*</span></label>
-		        <input type="text" class="form-control" id="nombre" placeholder="Ej: Cristian" required>
+		        <label for="name">Nombre <span class="text-warning font-weight-bold">*</span></label>
+		        <input type="text" class="form-control" name="name" id="name" placeholder="Ej: Cristian" required>
 		        <div class="valid-feedback">
 		          Correcto!
 		        </div>
@@ -95,7 +98,7 @@
 		      </div>
 		      <div class="col-md-6 mb-3"> 
 		        <label for="email">E-m@il <span class="text-warning font-weight-bold">*</span></label>
-		        <input type="email" class="form-control" id="email" placeholder="Ej: Cris.Gadea@gadeacorps.ar" required>
+		        <input type="email" class="form-control" name="email" id="email" placeholder="Ej: Cris.Gadea@gadeacorps.ar" required>
 		        <div class="valid-feedback">
 		          Correcto!
 		        </div>
@@ -105,8 +108,8 @@
 		
 		    <div class="form-row"> <!-- INICIO Password -->
 		      <div class="col-md-6 mb-3">
-		        <label for="pass">Password <span class="text-warning font-weight-bold">*</span></label>
-		        <input type="password" id="pass" class="form-control" placeholder="Nunca le digas a nadie tu contraseña!" aria-describedby="passwordHelpInline" required>
+		        <label for="password">Password <span class="text-warning font-weight-bold">*</span></label>
+		        <input type="password" name="password" id="password" class="form-control" placeholder="Nunca le digas a nadie tu contraseña!" aria-describedby="passwordHelpInline" required>
 		        <div class="invalid-feedback">
 		          Debes especificar una contraseña!
 		        </div>
@@ -116,7 +119,7 @@
 		      </div>
 		      <div class="col-md-6 mb-3">
 		        <label for="rePass" >Reingrese su Password <span class="text-warning font-weight-bold">*</span></label>
-		        <input type="password" id="rePass" class="form-control" placeholder="Confirme su contraseña!" aria-describedby="passwordHelpInline" required>
+		        <input type="password" name="rePass" id="rePass" class="form-control" placeholder="Confirme su contraseña!" aria-describedby="passwordHelpInline" required>
 		        <div class="invalid-feedback">
 		          Las contraseñas deben coincidir!
 		        </div>
@@ -138,7 +141,7 @@
 		        </div>
 		      </div>
 		    </div>
-		    <button class="btn btn-primary" type="submit" onclick="saveOnLocalStorage()">Aceptar</button>
+		    <button class="btn btn-primary form-submit" type="submit" value="Register" >Aceptar</button>
 	  </form>
 	  <br/><br/><br/>
 
