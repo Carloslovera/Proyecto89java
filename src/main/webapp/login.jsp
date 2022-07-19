@@ -15,6 +15,9 @@
 </head>
 
 <body>
+	<!-- Para validar al usuario -->
+	<input type="hidden" id="status" value="<%= request.getAttribute("status") %>">
+	
     <!-- Comienzo Header -->
     <header>
     <!-- Navbar content -->
@@ -26,14 +29,14 @@
 
 	<div class="container align-item-center bg-info" id="formularioLogin">
         <div class="d-flex justify-content-center">     <!-- Contenedor -->
-            <form id="formulario" class="text-center w-50" accept-charset=utf-8> <!-- Formulario Inicio Sesión -->
+            <form method="post" action="login" id="formulario" class="register-form text-center w-50" accept-charset=utf-8> <!-- Formulario Inicio Sesión -->
                 <div class="form-group">                    <!-- Usuario y Contraseña -->
                     <label for="email" class="font-weight-bold">E-mail ó Nombre de Usuario</label>
-                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                    <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
                     <small id="emailHelp" class="form-text">¡No informes tu e-mail de registro a nadie!</small>
                     <br>
                     <label for="password" class="font-weight-bold">Contraseña</label>
-                    <input type="password" class="form-control" id="password" aria-describedby="passHelp">
+                    <input type="password" class="form-control" name="password" id="password" aria-describedby="passHelp">
                     <small id="passHelp" class="form-text">¡No compartas tu contraseña con nadie! Nosotros nunca te la pediremos.</small>
                 </div>
                 <div class="form-group form-check">
@@ -41,7 +44,7 @@
                     <label class="form-check-label font-weight-bold" for="recuerdameCheck">Recuerdame</label>
                 </div>
                 <a href="./register.jsp" class="text-reset">Regístrese.</a>
-                <button type="submit" class="btn btn-primary" >Iniciar</button> <!-- onclick="validarForm()" -->
+                <button type="submit" class="btn btn-primary form-submit" value="Login" >Iniciar</button> <!-- onclick="validarForm()" -->
             </form>
 
 			</div>
